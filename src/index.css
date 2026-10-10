@@ -1,0 +1,141 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+
+@theme {
+  /* surfaces — layering guardrail: base → elevated → floating */
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #121212;
+  --color-bg-floating: #1a1a1a;
+
+  /* text */
+  --color-fg: #f5f5f5;
+  --color-fg-muted: #a3a3a3;
+  --color-fg-subtle: #787878; /* AA-corrected muted/secondary for readable small text (4.5:1 on --color-bg) */
+  --color-fg-decorative: #525252; /* decorative-only: icons, dividers, large text — never small readable copy */
+
+  /* borders */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.16);
+
+  /* fonts — never pair the same family for display and body */
+  --font-display: "Space Grotesk Variable", "Space Grotesk", sans-serif;
+  --font-body: "Inter Variable", "Inter", sans-serif;
+
+  /* tracking */
+  --tracking-eyebrow: 0.18em;
+  --tracking-display: -0.03em;
+
+  /* intentional spacing tokens, not raw arbitrary steps */
+  --spacing-section: 8rem;
+  --spacing-section-sm: 5rem;
+  --spacing-card-gap: 1.5rem;
+
+  /* layered, color-tinted shadows only — no flat shadow-md equivalent */
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 24px -8px rgba(0, 0, 0, 0.5);
+  --shadow-card-hover: 0 1px 2px rgba(0, 0, 0, 0.5), 0 20px 40px -12px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+
+  /* ambient glow — additive to depth shadows, monochrome "premium" cue */
+  --shadow-glow-hover: 0 1px 2px rgba(0, 0, 0, 0.5), 0 20px 40px -12px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 32px -6px rgba(255, 255, 255, 0.16);
+  --shadow-glow-focus: 0 0 0 1px rgba(255, 255, 255, 0.18), 0 0 0 4px rgba(255, 255, 255, 0.07),
+    0 0 24px -4px rgba(255, 255, 255, 0.15);
+
+  /* hero background drift — transform/opacity only, GPU-cheap */
+  --animate-drift-slow: drift-slow 32s ease-in-out infinite;
+  --animate-drift-slower: drift-slower 40s ease-in-out infinite reverse;
+  --animate-drift-slowest: drift-slowest 26s ease-in-out infinite;
+}
+
+@keyframes drift-slow {
+  0%,
+  100% {
+    transform: translate3d(-10%, -10%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(10%, 5%, 0) scale(1.15);
+  }
+}
+
+@keyframes drift-slower {
+  0%,
+  100% {
+    transform: translate3d(5%, 10%, 0) scale(1.1);
+  }
+  50% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+}
+
+@keyframes drift-slowest {
+  0%,
+  100% {
+    transform: translate3d(0%, 0%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, -10%, 0) scale(1.08);
+  }
+}
+
+.bg-atmosphere-gradient {
+  background-image:
+    radial-gradient(ellipse 60% 50% at 15% 0%, rgba(255, 255, 255, 0.09), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 30%, rgba(255, 255, 255, 0.065), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 50% 100%, rgba(255, 255, 255, 0.055), transparent 65%);
+}
+
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg-muted);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--color-fg);
+  letter-spacing: var(--tracking-display);
+}
+
+::selection {
+  background: rgba(245, 245, 245, 0.15);
+  color: var(--color-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-fg);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
