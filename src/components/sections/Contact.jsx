@@ -43,8 +43,8 @@ export function Contact() {
       <div className="mx-auto max-w-3xl">
         <SectionHeading
           eyebrow="Contact"
-          title="Let's automate something."
-          description="Have a workflow that shouldn't still be manual? Tell me about it."
+          title="Let's build something together."
+          description="Need a full-stack web application or an AI automation workflow? Tell me about your project."
           align="center"
         />
 

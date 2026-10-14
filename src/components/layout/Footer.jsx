@@ -15,7 +15,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-12 sm:flex-row sm:justify-between">
         <span className="flex items-center gap-2 text-sm font-semibold text-fg">
           <LogoMark className="h-5 w-5" />
-          {site.brand}
+          {site.brand && <span>{site.brand}</span>}
         </span>
 
         <div className="flex items-center gap-6">
@@ -27,7 +27,7 @@ export function Footer() {
         </div>
 
         <p className="text-xs text-fg-subtle">
-          © {new Date().getFullYear()} {site.name} — {site.brand}.
+          © {new Date().getFullYear()} {site.name}{site.brand ? ' — ' + site.brand : ''}.
         </p>
       </div>
     </footer>

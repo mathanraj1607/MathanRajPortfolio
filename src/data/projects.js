@@ -2,7 +2,7 @@
 export const projects = [
   {
     id: "AI Powered Customer Support Agent",
-    name: "n8n RAG Chatbot",
+    name: "n8n RAG Chatbot (Modified)",
     tagline: "A support chatbot that actually knows the product.",
     problem:
       "A growing SaaS team was fielding the same support questions over and over, and their docs were too scattered for a generic chatbot to answer accurately.",

@@ -10,7 +10,7 @@ export function About() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="About"
-          title="Full-stack builder, automation-first."
+          title="Full-stack engineering meets AI automation."
           description={site.bio}
         />
 

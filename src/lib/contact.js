@@ -1,5 +1,12 @@
-// TODO: Replace with your real Formspree endpoint, e.g. "https://formspree.io/f/xxxxxxx"
-export const CONTACT_FORM_ENDPOINT = "https://formspree.io/f/REPLACE_ME";
+// To receive contact form submissions:
+// 1. Go to https://formspree.io/ and sign up for a free account
+// 2. Create a new form and get your endpoint URL (looks like: https://formspree.io/f/your-form-id)
+// 3. Replace the value below with your actual Formspree endpoint
+// 4. Form submissions will be emailed to the address associated with your Formspree account
+//
+// Alternative: You can replace this with your own backend endpoint if preferred
+
+export const CONTACT_FORM_ENDPOINT = "https://formspree.io/f/xrpeyvgn";
 
 export async function submitContactForm(data) {
   const res = await fetch(CONTACT_FORM_ENDPOINT, {

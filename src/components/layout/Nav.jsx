@@ -42,24 +42,20 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2 text-sm font-semibold tracking-tight text-fg">
-          <LogoMark className="h-6 w-6" />
-          {site.brand}
-        </a>
-
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
-          {NAV_LINKS.map((link) => (
-            <UnderlineLink key={link.href} href={link.href}>
-              {link.label}
-            </UnderlineLink>
-          ))}
-        </nav>
-
-        <div className="hidden md:block">
-          <Button href={links.resumeUrl} target="_blank" rel="noreferrer" variant="secondary">
-            Resume
-          </Button>
-        </div>
+         <div className="flex-1"></div>
+         <nav className="flex items-center gap-8 md:flex flex-shrink-0" aria-label="Primary">
+           {NAV_LINKS.map((link) => (
+             <UnderlineLink key={link.href} href={link.href}>
+               {link.label}
+             </UnderlineLink>
+           ))}
+         </nav>
+         
+         <div className="hidden md:block flex-shrink-0">
+           <Button href={links.resumeUrl} target="_blank" rel="noreferrer" variant="secondary">
+             Resume
+           </Button>
+         </div>
 
         <button
           type="button"
@@ -105,6 +101,7 @@ export function Nav() {
                 Resume
               </Button>
             </div>
+  
           </motion.nav>
         )}
       </AnimatePresence>

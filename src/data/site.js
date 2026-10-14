@@ -1,7 +1,7 @@
 export const site = {
   name: "Mathan Raj",
-  brand: "Matey Automates",
+  brand: "",
   eyebrow: "Full-Stack Developer & AI Automation Specialist",
-  tagline: "I build AI automation systems that save businesses hours every week.",
-  bio: "Final-year B.E. Computer Science student building AI agents, n8n workflows, and RAG pipelines for freelance clients. I turn repetitive, manual processes into automated systems — usually shipped inside a week, always built to actually run in production, not just a demo.",
+  tagline: "I build scalable full-stack web applications and intelligent AI automation systems.",
+  bio: "Final-year B.E. Computer Science student building end-to-end web applications with React, Spring Boot, and PostgreSQL alongside AI agents, RAG pipelines, and n8n workflows. Whether it's a full-stack product from database schema to UI or an intelligent workflow that eliminates manual busywork, I ship systems built to run reliably in production.",
 };
