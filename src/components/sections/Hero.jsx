@@ -26,8 +26,9 @@ export function Hero() {
         <AnimatedBackground />
       </motion.div>
 
-      <motion.div style={{ y: contentY }} className="relative mx-auto max-w-3xl text-center">
-        <motion.div variants={heroReveal} initial="hidden" animate="visible">
+      <motion.div style={{ y: contentY }} className="relative mx-auto max-w-6xl flex flex-row flex-wrap items-center gap-12 px-12 ">
+        {/* Image */}
+        <motion.div variants={heroReveal} initial="hidden" animate="visible" className="flex-1 min-w-0 text-left">
           <p className="mb-6 text-xs font-medium uppercase tracking-eyebrow text-fg-subtle">
             {site.eyebrow}
           </p>
@@ -43,7 +44,18 @@ export function Hero() {
             </Button>
           </div>
         </motion.div>
+        <div className="flex-shrink-0">
+          <img
+            src="/headshot.jpeg"
+            alt="Headshot of Mathan Raj"
+            className="w-75 h-75 rounded-full object-cover border border-border transition-transform duration-300 hover:scale-105"
+          />
+        </div>
       </motion.div>
     </section>
   );
 }
+
+
+
+

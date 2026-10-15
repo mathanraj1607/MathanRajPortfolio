@@ -10,6 +10,7 @@ import { links } from "../../data/links";
 import { fadeUp, viewportOnce } from "../../lib/motion";
 
 const SOCIALS = [
+  { label: "GitHub", href: links.github },
   { label: "LinkedIn", href: links.linkedin },
   { label: "Fiverr", href: links.fiverr },
   { label: "Instagram", href: links.instagram },

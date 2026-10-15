@@ -52,7 +52,7 @@ export function Nav() {
          </nav>
          
          <div className="hidden md:block flex-shrink-0">
-           <Button href={links.resumeUrl} target="_blank" rel="noreferrer" variant="secondary">
+           <Button href={links.resumeUrl} target="_blank" rel="noreferrer" variant="secondary" className="ml-8">
              Resume
            </Button>
          </div>
@@ -82,14 +82,14 @@ export function Nav() {
           >
             <div className="flex flex-col gap-1 px-6 py-4">
               {NAV_LINKS.map((link) => (
-                <a
+                <Button
                   key={link.href}
                   href={link.href}
+                  variant="secondary"
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-2 py-3 text-sm text-fg-muted transition-colors duration-300 hover:text-fg"
                 >
                   {link.label}
-                </a>
+                </Button>
               ))}
               <Button
                 href={links.resumeUrl}
@@ -108,3 +108,4 @@ export function Nav() {
     </header>
   );
 }
+
