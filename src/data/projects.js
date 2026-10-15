@@ -25,7 +25,7 @@ export const projects = [
     result:
       "Increased energy yield by 30% and reduced operational costs through automated scheduling and real-time adjustments.",
     stack: ["Python", "TensorFlow", "AWS", "PostgreSQL", "React"],
-    link: "#",
+    link: "https://github.com/mathanraj1607/solar-wind-deployment-intelligence",
     image: "/projects/solar-wind-deployment-intelligence.png",
   },
   {
