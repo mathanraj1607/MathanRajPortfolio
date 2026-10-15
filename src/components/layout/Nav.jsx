@@ -41,8 +41,7 @@ export function Nav() {
         scrolled ? "border-b border-border bg-bg/80 backdrop-blur" : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-         <div className="flex-1"></div>
+      <div className="mx-auto flex max-w-6xl items-center justify-center px-6 py-4">
          <nav className="flex items-center gap-8 md:flex flex-shrink-0" aria-label="Primary">
            {NAV_LINKS.map((link) => (
              <UnderlineLink key={link.href} href={link.href}>

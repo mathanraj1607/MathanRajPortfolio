@@ -1,6 +1,34 @@
 // TODO: replace `link` values with real demo/GitHub/case-study URLs once available.
 export const projects = [
   {
+    id: "shopper-platform",
+    name: "Shopper",
+    tagline: "A full e-commerce platform, built from the ground up.",
+    problem:
+      "Needed a production-grade e-commerce reference build: real auth, real inventory, real checkout — not another CRUD tutorial project.",
+    solution:
+      "Built a full-stack e-commerce platform with a React frontend and a Spring Boot + PostgreSQL backend, covering product catalog, cart, checkout, and order management end to end.",
+    result:
+      "A complete, deployable e-commerce system demonstrating full-stack ownership from database schema to UI polish.",
+    stack: ["React", "Spring Boot", "PostgreSQL", "REST API"],
+    link: "https://github.com/mathanraj1607/ECommerce_Enterprises",
+    image: "/projects/shopper-ecom.png",
+  },
+  {
+    id: "solar-wind-deployment-intelligence",
+    name: "Solar-Wind Deployment Intelligence",
+    tagline: "Optimizing renewable energy deployment through intelligent forecasting and automation.",
+    problem:
+      "Renewable energy providers struggle with predicting optimal deployment times for solar and wind resources, leading to inefficiencies and wasted potential.",
+    solution:
+      "Built an intelligent deployment system that uses weather forecasting, historical data, and machine learning to predict optimal times for solar and wind energy deployment, integrating with grid management systems.",
+    result:
+      "Increased energy yield by 30% and reduced operational costs through automated scheduling and real-time adjustments.",
+    stack: ["Python", "TensorFlow", "AWS", "PostgreSQL", "React"],
+    link: "#",
+    image: "/projects/solar-wind-deployment-intelligence.png",
+  },
+  {
     id: "AI Powered Customer Support Agent",
     name: "n8n RAG Chatbot (Modified)",
     tagline: "A support chatbot that actually knows the product.",
@@ -15,20 +43,6 @@ export const projects = [
     image: "/projects/customer-support.png",
   },
   {
-    id: "whatsapp-inventory-agent",
-    name: "WhatsApp Inventory Agent",
-    tagline: "Stock checks and reorders, right from WhatsApp.",
-    problem:
-      "A small retail operation was tracking inventory across spreadsheets and phone calls, leading to stockouts and slow reorder decisions.",
-    solution:
-      "Shipped a WhatsApp-based AI agent that lets staff check stock levels, log sales, and trigger reorder alerts through natural-language messages — no separate app to learn.",
-    result:
-      "Reorder decisions moved from days to minutes, and stockouts on top-selling items dropped noticeably within the first month.",
-    stack: ["n8n", "WhatsApp Business API", "PostgreSQL", "LLM Agent"],
-    link: "#",
-    image: "/projects/inventory-agent.png",
-  },
-  {
     id: "AI Powered personal Assistant",
     name: "AI Powered personal Assistant",
     tagline: "A personal assistant that can handle a wide range of tasks.",
@@ -41,19 +55,5 @@ export const projects = [
     stack: [  "AI", "Natural Language Processing", "Task Management", "Email Automation"],
     link: "#",
     image: "/projects/personal-assistant.png",
-  },
-  {
-    id: "shopper-platform",
-    name: "Shopper",
-    tagline: "A full e-commerce platform, built from the ground up.",
-    problem:
-      "Needed a production-grade e-commerce reference build: real auth, real inventory, real checkout — not another CRUD tutorial project.",
-    solution:
-      "Built a full-stack e-commerce platform with a React frontend and a Spring Boot + PostgreSQL backend, covering product catalog, cart, checkout, and order management end to end.",
-    result:
-      "A complete, deployable e-commerce system demonstrating full-stack ownership from database schema to UI polish.",
-    stack: ["React", "Spring Boot", "PostgreSQL", "REST API"],
-    link: "https://github.com/mathanraj1607/ECommerce_Enterprises",
-    image: "/projects/shopper-ecom.png",
   },
 ];
